@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">炫彩天气</string>
+    <string name="app_serverName">和风天气&#x00ae;提供数据服务</string>
+    <string name="tip">暂无天气数据，刷新一下吧！</string>
+</resources>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <com.threepeople.dazzlecolourweather.view.RoundAngleLinearLayout
+        android:id="@+id/preBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="20dp"
+        app:cornerRadius="15dp"
+        tools:minHeight="300dp"
+        tools:background="#4ABAC4"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/preStatus1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="无信号"/>
+
+            <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+                android:id="@+id/preStatus2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/preStatus1"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/pic_pre_status_one"/>
+
+            <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+                android:id="@+id/preStatus3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_toStartOf="@id/preStatus4"
+                android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/pic_pre_status_two"/>
+
+            <TextView
+                android:id="@+id/preStatus4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="80%   8:00"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+            android:id="@+id/preIconColor"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            app:baseColor="#000000"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/pic_weather_100"/>
+
+        <TextView
+            android:id="@+id/preTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="北京  晴"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal">
+
+            <com.threepeople.dazzlecolourweather.view.ProgressView
+                android:id="@+id/preProgressView"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                app:numberSize="16sp"/>
+
+            <View
+                android:id="@+id/preStressColor"
+                android:layout_width="40dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/preProgressView"
+                tools:background="#7FD1F8"/>
+
+            <View
+                android:id="@+id/preIgnoreColor"
+                android:layout_width="40dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/preProgressView"
+                android:layout_below="@id/preStressColor"
+                tools:background="#888888"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/preThemeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            tools:background="#000000"
+            tools:ignore="DisableBaselineAlignment,UselessParent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:minHeight="30dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/preThemeColor1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+                        android:id="@+id/preTheme1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_clothes"/>
+
+                    <TextView
+                        android:id="@+id/preTheme2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="穿衣"
+                        android:textColor="#FFFFFF"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:minHeight="30dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/preThemeColor2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+                        android:id="@+id/preTheme3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_exercise"/>
+
+                    <TextView
+                        android:id="@+id/preTheme4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="运动"
+                        android:textColor="#FFFFFF"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/clearAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:text="清除所有设置"/>
+
+    </com.threepeople.dazzlecolourweather.view.RoundAngleLinearLayout>
+
+    <TextView
+        android:id="@+id/changeStatusColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@null"
+        android:visibility="visible"
+        android:text="切换状态栏字体颜色"
+        android:textSize="15sp"
+        android:textColor="#2E9AFE"/>
+
+    <TextView
+        android:id="@+id/settingBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="visible"
+        android:text="设置背景图"
+        android:textSize="15sp"
+        android:textColor="#2E9AFE"/>
+
+</LinearLayout>

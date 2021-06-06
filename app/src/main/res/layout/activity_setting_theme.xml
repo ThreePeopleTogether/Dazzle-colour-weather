@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:id="@+id/settingThemeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_white"
+    tools:context=".activity.SettingThemeActivity"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <LinearLayout
+        android:id="@+id/replaceHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+            android:id="@+id/returnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_return"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/settingThemeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:textStyle="bold"
+            android:text="设置主题"
+            android:textSize="20sp"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/replaceHeader"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/selectTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/whiteTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/selector_btn_white"
+                android:text="白色"
+                android:textColor="@drawable/selector_text"
+                android:gravity="center"
+                android:layout_margin="9dp"
+                android:padding="7dp"/>
+
+            <RadioButton
+                android:id="@+id/blackTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:button="@null"
+                android:background="@drawable/selector_btn_black"
+                android:text="黑色"
+                android:textColor="@drawable/selector_text"
+                android:layout_margin="9dp"
+                android:padding="7dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <RadioButton
+                android:id="@+id/colorfulTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:button="@null"
+                android:background="@drawable/selector_btn_colorful"
+                android:text="彩色"
+                android:textColor="@drawable/selector_text"
+                android:layout_margin="9dp"
+                android:padding="7dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <RadioButton
+                android:id="@+id/customTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:button="@null"
+                android:background="@drawable/selector_btn_diy"
+                android:text="自定义"
+                android:textColor="@drawable/selector_text"
+                android:layout_margin="9dp"
+                android:padding="7dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tipText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="点击预览图内容设置颜色"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            tools:ignore="DisableBaselineAlignment">
+
+            <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+                android:id="@+id/previewLast"
+                android:layout_width="50dp"
+                android:visibility="invisible"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_left"/>
+
+            <LinearLayout
+                android:id="@+id/addPreview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dayText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:text="白天"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_morning"/>
+
+                <TextView
+                    android:id="@+id/nightText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:text="黑夜"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_night"/>
+
+                <!--<com.threepeople.dazzlecolourweather.view.MyViewPager
+                    android:id="@+id/previewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    tools:layout_height="400dp"/>
+
+                <LinearLayout
+                    android:id="@+id/previewLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    tools:layout_height="400dp"
+                    android:orientation="horizontal"/>-->
+
+            </LinearLayout>
+
+            <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+                android:id="@+id/previewNext"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:src="@drawable/ic_right"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

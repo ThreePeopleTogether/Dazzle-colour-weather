@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialogLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:orientation="vertical"
+    tools:layout_gravity="center"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/useColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="使用颜色"
+        android:textSize="16sp"/>
+
+    <View
+        android:id="@+id/dialogLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/selectPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="从相册选择"
+        android:textSize="16sp"
+        android:padding="10dp"/>
+
+</LinearLayout>

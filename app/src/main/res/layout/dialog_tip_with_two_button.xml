@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialogLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="300dp"
+    tools:layout_gravity="center"
+    android:orientation="vertical"
+    tools:background="#4ABAC4"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="提示"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/dialogMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        tools:text="弹窗提示的信息"
+        android:layout_gravity="center"/>
+
+    <View
+        android:id="@+id/dialogLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        tools:background="#333000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialogCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="取消"
+            android:textSize="16sp"
+            android:background="@null"/>
+
+        <View
+            android:id="@+id/dialogLine2"
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            tools:background="#333000"/>
+
+        <Button
+            android:id="@+id/dialogOk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="确定"
+            android:textSize="16sp"
+            android:background="@null"/>
+
+    </LinearLayout>
+
+</LinearLayout>

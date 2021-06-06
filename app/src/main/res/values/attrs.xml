@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WaterWaveRefreshLayout">
+        <attr name="waterWaveColor" format="color"/>
+        <attr name="waterWaveLength" format="dimension"/>
+        <attr name="waterWaveHeight" format="dimension"/>
+        <attr name="maxTopHeight" format="dimension"/>
+        <attr name="waterWaveBottomOffset" format="dimension"/>
+        <attr name="refreshLimitScale" format="float"/>
+        <attr name="tipTextForDropDown" format="string"/>
+        <attr name="tipTextForRefresh" format="string"/>
+        <attr name="tipTextOnRefreshSuccess" format="string"/>
+        <attr name="tipTextSize" format="dimension"/>
+        <attr name="tipTextColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="ColorChangeableIconView">
+        <attr name="baseColor" format="color"/>
+        <attr name="goalColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressView">
+        <attr name="minValue" format="integer"/>
+        <attr name="maxValue" format="integer"/>
+        <attr name="currentValue" format="integer"/>
+        <attr name="numberSize" format="dimension"/>
+        <attr name="numberColor" format="color"/>
+        <attr name="blankColor" format="color"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="progressWidth" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundAngleLinearLayout">
+        <attr name="cornerRadius" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="ImageCroppingView">
+        <!-- 设置裁剪区域宽高比. -->
+        <attr name="sizeScale" format="enum">
+            <enum name="use_weight" value="0"/>
+            <enum name="device_size" value="1"/>
+            <enum name="device_size_invert" value="2"/>
+        </attr>
+        <!-- 设置裁剪区域宽度所占分量，仅在sizeScale设置为use_weight时有效. -->
+        <attr name="widthWeight" format="integer"/>
+        <!-- 设置裁剪区域高度所占分量，仅在sizeScale设置为use_weight时有效. -->
+        <attr name="heightWeight" format="integer"/>
+        <!-- 设置背景颜色. -->
+        <attr name="backgroundColor" format="color"/>
+        <!-- 设置阴影层颜色（建议补充颜色的透明度）. -->
+        <attr name="shadowColor" format="color"/>
+        <!-- 设置是否显示四个范围示意角. -->
+        <attr name="showFourAngle" format="boolean"/>
+        <!-- 设置裁剪区域内部的填充样式. -->
+        <attr name="fillStyle" format="enum">
+            <!-- 不使用任何样式. -->
+            <enum name="none" value="0"/>
+            <!-- 画一个内切椭圆. -->
+            <enum name="circle" value="1"/>
+            <!-- 用九宫格划分. -->
+            <enum name="nineGrid" value="2"/>
+        </attr>
+        <!-- 设置填充样式是否使用虚线绘制. -->
+        <attr name="styleUseDashed" format="boolean"/>
+        <!-- 设置裁剪区域内的描线宽度，四个角的描线宽度为其2倍. -->
+        <attr name="divideLineWidth" format="dimension"/>
+        <!-- 设置裁剪区域内的描线颜色. -->
+        <attr name="divideLineColor" format="color"/>
+    </declare-styleable>
+</resources>

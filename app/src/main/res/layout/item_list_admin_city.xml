@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_gravity="center">
+
+    <!--该listItem为城市list样式-->
+
+    <RelativeLayout
+        android:id="@+id/itemAdminLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="15dp"
+        android:elevation="10dp"
+        android:padding="15dp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="RelativeOverlap">
+
+            <TextView
+                android:id="@+id/cityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="邗江区"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                tools:text="中国-江苏-扬州"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+                android:id="@+id/locationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location_blue"/>
+
+            <!--此处为删除按钮，点击顶部的编辑按钮显示-->
+
+            <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+                android:id="@+id/deleteIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_del"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

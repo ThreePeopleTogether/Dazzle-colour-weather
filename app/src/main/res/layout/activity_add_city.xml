@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:id="@+id/searchCityLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddCityActivity"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <RelativeLayout
+        android:id="@+id/addCityHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/returnAdminLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:elevation="8dp"
+            android:layout_margin="8dp"
+            android:padding="10dp">
+
+            <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+                android:id="@+id/returnAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_return"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/searchCityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/returnAdminLayout"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:text="添加城市"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addCityHead"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/locationLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp">
+
+            <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+                android:id="@+id/locationIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_location"/>
+
+            <TextView
+                android:id="@+id/locationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center_vertical"
+                android:text="正在定位"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="15dp"
+            android:padding="8dp">
+
+            <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+                android:id="@+id/searchIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_vertical"
+                tools:ignore="ContentDescription"/>
+
+            <EditText
+                android:id="@+id/inputSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:background="@null"
+                android:hint="请输入城市名称"
+                android:inputType="text"
+                android:maxLines="1"
+                android:maxLength="50"
+                tools:ignore="Autofill,RtlSymmetry"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hotCityLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:paddingBottom="10dp"/>
+
+        <ListView
+            android:id="@+id/searchResultList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:divider="@null"
+            android:scrollbars="none"
+            android:listSelector="@color/transparent"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

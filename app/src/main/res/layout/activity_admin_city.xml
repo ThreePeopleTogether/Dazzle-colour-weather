@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:id="@+id/adminCityLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AdminCityActivity"
+    tools:ignore="HardcodedText,ButtonStyle">
+
+    <RelativeLayout
+        android:id="@+id/adminCityHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/returnHomeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:elevation="8dp"
+            android:layout_margin="8dp"
+            android:padding="10dp">
+
+            <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+                android:id="@+id/returnHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_return"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/adminCityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/returnHomeLayout"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:text="管理城市"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/editCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="编辑"
+            android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/adminCityList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adminCityHead"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:listSelector="@color/transparent"/>
+
+    <LinearLayout
+        android:id="@+id/searchCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="15dp"
+        android:layout_margin="20dp"
+        android:elevation="10dp">
+
+        <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+            android:id="@+id/searchCityIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            tools:ignore="ContentDescription"/>
+
+        <TextView
+            android:id="@+id/searchCityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="添加城市"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

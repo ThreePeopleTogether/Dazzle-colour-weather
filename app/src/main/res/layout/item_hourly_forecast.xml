@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!--每小时天气状况图标-->
+
+    <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+        android:id="@+id/hourlyIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:baseColor="#000000"
+        tools:src="@drawable/pic_weather_999"/>
+
+    <!--每小时温度-->
+
+    <TextView
+        android:id="@+id/hourlyTmp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        tools:text="13℃"/>
+
+    <!--小时数 "1h  2h  3h ..."-->
+
+    <TextView
+        android:id="@+id/hourlyTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="7h"
+        android:textSize="12sp"/>
+
+</LinearLayout>

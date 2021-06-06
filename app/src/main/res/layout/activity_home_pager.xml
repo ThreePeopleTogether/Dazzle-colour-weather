@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.threepeople.dazzlecolourweather.view.WaterWaveRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homePagerRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="25dp"
+    android:orientation="vertical"
+    tools:context=".activity.HomePagerActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+            android:id="@+id/toSettingTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_theme"/>
+
+        <TextView
+            android:id="@+id/cityNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="北京"
+            android:textSize="22sp"
+            android:layout_centerInParent="true"
+            tools:ignore="RelativeOverlap"/>
+
+        <TextView
+            android:id="@+id/cityNameTitleAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cityNameTitle"
+            android:layout_centerVertical="true"
+            android:text=">>"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:id="@+id/toAdminCityLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.threepeople.dazzlecolourweather.view.ColorChangeableIconView
+                android:id="@+id/toAdminCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_setting"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:orientation="vertical"
+        tools:ignore="ButtonStyle,HardcodedText,UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:src="@drawable/ic_not_data"
+            tools:ignore="ContentDescription"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="@string/tip"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_height="500dp">
+
+        <com.threepeople.dazzlecolourweather.view.MyScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <com.threepeople.dazzlecolourweather.view.AutoHeightViewPager
+                android:id="@+id/cityWeatherPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.threepeople.dazzlecolourweather.view.MyScrollView>
+
+        <LinearLayout
+            android:id="@+id/pointLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            tools:layout_height="20dp"
+            tools:background="@color/white"/>
+
+    </RelativeLayout>
+
+</com.threepeople.dazzlecolourweather.view.WaterWaveRefreshLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:layout_gravity="center"
+    android:padding="25dp"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:ignore="HardcodedText">
+
+    <top.defaults.colorpicker.ColorPickerView
+        android:id="@+id/colorPicker"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:enableAlpha="true"
+        app:enableBrightness="true"/>
+
+    <Button
+        android:id="@+id/dialogOk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
+        android:text="确定"
+        android:textSize="17sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/selector_btn_center"/>
+
+
+</LinearLayout>
